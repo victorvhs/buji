@@ -8,6 +8,17 @@ $(document).ready(function (){
         success: function(data){
           alert(data);
           $('#chamado').val('');
+          $('#modelo').val('');
+          $('#serie').val('');
+          $('#peca').val('');
+          $('#pecaCodigo').val('');
+          $('#contador').val('');
+          $('#nf').val('');
+          $('#dataCompra').val('');
+          $('#dataInstala').val('');
+          $('#dataAnalise').val('');
+          $('#contador_defeito').val('');
+          $('#defeito').val('');
           //TODO Colocar todos os campos do formulario
         }
       });
