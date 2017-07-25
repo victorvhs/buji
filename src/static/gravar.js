@@ -7,6 +7,8 @@ $(document).ready(function (){
         data: $('#formNovo').serialize(),
         success: function(data){
           alert(data);
+          $('#chamado').val('');
+          //TODO Colocar todos os campos do formulario
         }
       });
     }else{
