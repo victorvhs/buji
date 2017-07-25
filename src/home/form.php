@@ -1,9 +1,13 @@
 <?php
 //require_once "vendor/autoload.php";
+session_start();
 require_once("../db.class.php");
- if(!$_POST['chamado']){
+ if(!isset($_SESSION['usuario'])){
+   header('Location:../index.php?erro=2');
+ }
+/* if(!$_POST['chamado']){
 		header('Location: novo.php?status=2');
-	}
+	} */
 
 	$chamado    = strtoupper($_POST['chamado']);
 	$n_serie 	  = strtoupper($_POST['serie']) ;
@@ -54,8 +58,7 @@ $sql = " INSERT INTO formularios (chamado, peca, pecaCod, modelo, contador, defe
 //executar a query
 $result = mysqli_query($link, $sql);
 if($result){
- header('Location: novo.php?status=1');
-echo "gravado";
+  echo "Gravado com sucesso";
 } else {
   echo 'Erro ao registrar. O banco não me respondou a tempo.';
 }
