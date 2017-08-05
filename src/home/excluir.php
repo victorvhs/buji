@@ -15,8 +15,7 @@
    $link = $objDb->conecta_mysql();
    $sql = "SELECT * FROM formularios WHERE id = '$id'" ;
    $res = mysqli_query($link, $sql);
-   // Para excluir o registro do formularo do banco.
-   //TODO talvez seja melhor usar um evento no JS para capturar o click
+
    if(isset($_GET['delete'])){
      echo "<script>
               alert('Formulario deletado com sucesso');
@@ -71,6 +70,6 @@
 
 
   </div>
- 			<script src=static/bt/js/bootstrap.min.js></script>
+ 			<script src=../static/bt/js/bootstrap.min.js></script>
  	</body>
  </html>

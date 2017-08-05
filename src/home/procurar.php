@@ -44,6 +44,7 @@
                   <th>Identificação</th>
                   <th>Chamado</th>
                   <th>Peça</th>
+                  <th>Gerar</th>
                   <th>Editar</th>
                   <th>Excluir</th>
               </tr>" ;
@@ -56,7 +57,11 @@
               "</td><td>".
               $escrever['chamado'].
               "</td><td>".
-              $escrever['peca']
+              $escrever['peca'].
+              "</td><td>".
+              "<a class='btn btn-primary' href='gerar.php?id=".$escrever['id']."''>Gerar
+                <span class='fa fa-cogs' aria-hidden='true'</span>
+              </a>"
               ."</td><td>".
               "<a class='btn btn-primary' href='editar.php?id=".$escrever['id']."''>Editar
                 <span class='glyphicon glyphicon-pencil' aria-hidden='true'</span>
@@ -76,6 +81,6 @@
        <div class="clearfix"></div>
      </div>
    </div>
-		<script src=static/bt/js/bootstrap.min.js></script>
+		<script src=../static/bt/js/bootstrap.min.js></script>
  </body>
  </html>

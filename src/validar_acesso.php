@@ -19,6 +19,7 @@
 
 			$_SESSION['usuario'] = $dados_usuario['usuario'];
 			$_SESSION['email'] = $dados_usuario['email'];
+			echo "ok";
 
 			header("Location: home/home.php");
 		} else {

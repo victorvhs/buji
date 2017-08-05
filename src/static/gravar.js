@@ -19,7 +19,6 @@ $(document).ready(function (){
           $('#dataAnalise').val('');
           $('#contador_defeito').val('');
           $('#defeito').val('');
-          //TODO Colocar todos os campos do formulario
         }
       });
     }else{

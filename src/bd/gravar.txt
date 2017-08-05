@@ -1,0 +1,4 @@
+Primeiro inserir a peça na tabela de peça.
+Inserir a peça, usando a chave estrangeira na tabela Form_Pecas.
+Inserir os valores na tabela Forms.
+Atualizar o codForm com o valor do formulario gerado.

@@ -51,8 +51,6 @@ CREATE TABLE formularios(
     nf int
  )
 */
-
-
 $sql = " INSERT INTO formularios (chamado, peca, pecaCod, modelo, contador, defeito, contadorDefeito, dataInstalacao, dataCompra, dataAnalise, nf, n_serie)
  VALUES ('$chamado', '$peca', '$pecaCod', '$modelo', '$contador', '$defeito', '$contadorDefeito','$dataInstalacao', '$dataCompra', '$dataAnalise', '$nf','$n_serie') " ;
 //executar a query

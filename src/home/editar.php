@@ -19,6 +19,13 @@
    $res = mysqli_fetch_assoc($res);
    include_once('menu.php');
  ?>
+<!-- TODO Colocar o status do formulario enviado ou pendente
+          Expandir para pegar mais de um RMA e mais de uma peça.
+          chamado como chave primaria.
+          Controle da gravação do chamado no bd
+          tabela de peças
+
+ -->
 
  <div class="container">
    <div class="col-md-10">

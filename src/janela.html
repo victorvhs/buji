@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Teste de janela</title>
+    <script src="static/js/jquery-2.2.4.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function (){
+      $('#bt').click(function(){
+       var resposta = confirm('Deseja apagar?');
+       console.log(resposta);
+      });
+    });
+
+    </script>
+  </head>
+  <body>
+    <button type="button" name="button" id="bt">Click</button>
+
+  </body>
+</html>
