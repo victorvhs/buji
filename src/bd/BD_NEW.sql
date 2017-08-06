@@ -12,11 +12,11 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 
--- Copiando estrutura do banco de dados para juji
-CREATE DATABASE IF NOT EXISTS `juji` /*!40100 DEFAULT CHARACTER SET latin1 */;
-USE `juji`;
+-- Copiando estrutura do banco de dados para jus
+CREATE DATABASE IF NOT EXISTS `jus` /*!40100 DEFAULT CHARACTER SET latin1 */;
+USE `jus`;
 
--- Copiando estrutura para tabela juji.forms
+-- Copiando estrutura para tabela jus.forms
 CREATE TABLE IF NOT EXISTS `forms` (
   `codForm` int(11) NOT NULL AUTO_INCREMENT,
   `chamado` varchar(30) DEFAULT NULL,
@@ -42,12 +42,12 @@ CREATE TABLE IF NOT EXISTS `forms` (
   CONSTRAINT `FK_user` FOREIGN KEY (`usuario`) REFERENCES `usuarios` (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.forms: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela jus.forms: ~0 rows (aproximadamente)
 DELETE FROM `forms`;
 /*!40000 ALTER TABLE `forms` DISABLE KEYS */;
 /*!40000 ALTER TABLE `forms` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.formularios
+-- Copiando estrutura para tabela jus.formularios
 CREATE TABLE IF NOT EXISTS `formularios` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `chamado` varchar(80) DEFAULT NULL,
@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `formularios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.formularios: ~5 rows (aproximadamente)
+-- Copiando dados para a tabela jus.formularios: ~5 rows (aproximadamente)
 DELETE FROM `formularios`;
 /*!40000 ALTER TABLE `formularios` DISABLE KEYS */;
 INSERT INTO `formularios` (`id`, `chamado`, `peca`, `pecaCod`, `modelo`, `contador`, `defeito`, `contadorDefeito`, `dataInstalacao`, `dataCompra`, `dataAnalise`, `nf`, `n_serie`, `RMA`) VALUES
@@ -77,7 +77,7 @@ INSERT INTO `formularios` (`id`, `chamado`, `peca`, `pecaCod`, `modelo`, `contad
 	(18, 'XXX', 'CCC', 'CCC', 'CCC', 12, 'CCCCCC', 12121, '1212-12-12', '1212-12-12', '0012-12-12', 21212, 'CCCC', NULL);
 /*!40000 ALTER TABLE `formularios` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.form_pecas
+-- Copiando estrutura para tabela jus.form_pecas
 CREATE TABLE IF NOT EXISTS `form_pecas` (
   `idTBFormPeca` int(11) NOT NULL AUTO_INCREMENT,
   `codPeca` varchar(50) DEFAULT NULL,
@@ -88,12 +88,12 @@ CREATE TABLE IF NOT EXISTS `form_pecas` (
   CONSTRAINT `FK_peca_formPeca` FOREIGN KEY (`codPeca`) REFERENCES `pecas` (`codPeca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.form_pecas: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela jus.form_pecas: ~0 rows (aproximadamente)
 DELETE FROM `form_pecas`;
 /*!40000 ALTER TABLE `form_pecas` DISABLE KEYS */;
 /*!40000 ALTER TABLE `form_pecas` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.garantias
+-- Copiando estrutura para tabela jus.garantias
 CREATE TABLE IF NOT EXISTS `garantias` (
   `id` int(11) NOT NULL,
   `chamado` varchar(80) DEFAULT NULL,
@@ -103,26 +103,26 @@ CREATE TABLE IF NOT EXISTS `garantias` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.garantias: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela jus.garantias: ~1 rows (aproximadamente)
 DELETE FROM `garantias`;
 /*!40000 ALTER TABLE `garantias` DISABLE KEYS */;
 INSERT INTO `garantias` (`id`, `chamado`, `peca`, `nf`, `n_serie`) VALUES
 	(0, '1044980', '123', '123', '123');
 /*!40000 ALTER TABLE `garantias` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.pecas
+-- Copiando estrutura para tabela jus.pecas
 CREATE TABLE IF NOT EXISTS `pecas` (
   `modelo` varchar(50) DEFAULT NULL,
   `codPeca` varchar(50) NOT NULL,
   PRIMARY KEY (`codPeca`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.pecas: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela jus.pecas: ~0 rows (aproximadamente)
 DELETE FROM `pecas`;
 /*!40000 ALTER TABLE `pecas` DISABLE KEYS */;
 /*!40000 ALTER TABLE `pecas` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.rmas
+-- Copiando estrutura para tabela jus.rmas
 CREATE TABLE IF NOT EXISTS `rmas` (
   `idTBrma` int(11) NOT NULL AUTO_INCREMENT,
   `peca` varchar(50) DEFAULT NULL,
@@ -131,12 +131,12 @@ CREATE TABLE IF NOT EXISTS `rmas` (
   PRIMARY KEY (`idTBrma`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
--- Copiando dados para a tabela juji.rmas: ~0 rows (aproximadamente)
+-- Copiando dados para a tabela jus.rmas: ~0 rows (aproximadamente)
 DELETE FROM `rmas`;
 /*!40000 ALTER TABLE `rmas` DISABLE KEYS */;
 /*!40000 ALTER TABLE `rmas` ENABLE KEYS */;
 
--- Copiando estrutura para tabela juji.usuarios
+-- Copiando estrutura para tabela jus.usuarios
 CREATE TABLE IF NOT EXISTS `usuarios` (
   `id` int(11) NOT NULL,
   `email` varchar(100) CHARACTER SET latin1 NOT NULL,
@@ -145,7 +145,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
--- Copiando dados para a tabela juji.usuarios: ~1 rows (aproximadamente)
+-- Copiando dados para a tabela jus.usuarios: ~1 rows (aproximadamente)
 DELETE FROM `usuarios`;
 /*!40000 ALTER TABLE `usuarios` DISABLE KEYS */;
 INSERT INTO `usuarios` (`id`, `email`, `usuario`, `senha`) VALUES

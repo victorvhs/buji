@@ -21,21 +21,19 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-4">
-      <div class="">
-        <p><h2>Procurar</h2></p>
+    <div class="col-sm-10">
+      <div class="col-sm-4">
+          <h2>Procurar</h2>
+        <div class="input-group">
+          <input type="text" class="form-control" name="valProcurar" id="valProcurar" placeholder="Insira o chamado">
+          <span class="input-group-addon" id="procurar"><i class="fa fa-search" aria-hidden="true"></i></span>
+        </div>
+        <br>
       </div>
-      <div class="input-group">
-        <input type="text" class="form-control" name="valProcurar" id="valProcurar" placeholder="Insira o chamado">
-        <span class="input-group-addon" id="procurar"><i class="fa fa-search" aria-hidden="true"></i></span>
+      <div id="resultado" >
       </div>
-      <div id="resultado">
 
-      </div>
     </div>
-    <div class="col-sm-4">
-    </div>
-
   </div><!-- Fecha Row -->
 </div> <!-- Fecha conteiner -->
 <script src=../static/bt/js/bootstrap.min.js></script>

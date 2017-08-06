@@ -7,7 +7,7 @@ $(document).ready(function (){
         method: 'post',
         data: {'procurar': $('#valProcurar').val()},
         success: function(data){
-        $('#resultado').html(data).show("slow");
+        $('#resultado').html(data);
         }
       });
     }
